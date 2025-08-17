@@ -78,3 +78,6 @@
   font-weight: 500;
   border-radius: 6px;
 }
+[data-lastpass-icon-root] {
+  display: none !important;
+}

@@ -205,11 +205,12 @@
                             <div class="contact-card-simple" id="contactCardBox">
                               <div>
                                 <h4 >Get in Touch</h4>
-                                <form>
-                                  <input type="text" class="form-control mb-3" placeholder="Name" >
-                                  <input type="text" class="form-control mb-3" placeholder="Email" >
-                                  <input type="text" class="form-control mb-3" placeholder="Contact" >
+                                <form id="contactFormBanner">
+                                  <input type="text" class="form-control mb-3" placeholder="Name" name="name" required>
+                                  <input type="email" class="form-control mb-3" placeholder="Email" name="email" required>
+                                  <input type="text" class="form-control mb-3" placeholder="Contact" name="mobile" required>
                                   <button type="submit" class="btn w-100">Submit</button>
+                                <div id="contactBannerMsg" style="margin-top:10px;display:none;"></div>
                                 </form>
                               </div>
                             </div>
@@ -1084,7 +1085,7 @@
                 </div>
 
                 <div class="col-md-5">
-                    <form name="bookingForm" id="booking_form" method="post" action="booking.php">
+                    <form name="bookingForm" id="booking_form">
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
@@ -1096,34 +1097,6 @@
                             <div class="col-md-12 mt-0">
                                 <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Your mobile" required>
                             </div>
-
-                            <!-- <div class="col-md-6">
-                                <div id="date" class="relative input-group date" data-date-format="mm-dd-yyyy">
-                                    <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-calendar"></i>
-                                    <input class="form-control" name="date" type="text" >
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="relative">
-                                    <select name="time" id="time" class="form-control">
-                                        <option value="10:00">10:00</option>
-                                        <option value="11:00">11:00</option>
-                                        <option value="12:00">12:00</option>
-                                        <option value="13:00">13:00</option>
-                                        <option value="14:00">14:00</option>
-                                        <option value="15:00">15:00</option>
-                                        <option value="16:00">16:00</option>
-                                        <option value="17:00">17:00</option>
-                                        <option value="18:00">18:00</option>
-                                        <option value="19:00">19:00</option>
-                                        <option value="20:00">20:00</option>
-                                    </select>
-                                    <i class="absolute top-0 end-0 id-color pt-3 pe-3 icofont-simple-down"></i>
-                                </div>
-                            </div>                                 -->
-
                             <div class="col-md-12 mt-0">
                                 <textarea name="message" id="message" class="form-control h-150px" placeholder="Submit Request" required></textarea>
                             </div>
@@ -1137,7 +1110,7 @@
                             </div>
                         </div>
                     </form>
-                    <div id="success_message_col" class='success'>
+                    <div id="success_message_col" class='mt-2'>
                         Your message has been sent successfully. Refresh this page if you want to send more messages.
                     </div>
                     <div id="error_message" class='error'>
@@ -1229,9 +1202,10 @@
     ================================================== -->
     <script src="js/vendors.js"></script>
     <script src="js/designesia.js"></script>
-    <script src="js/validation-booking.js"></script>
+    <!-- <script src="js/validation-booking.js"></script> -->
     <script src="js/swiper.js"></script>
     <script src="js/custom-swiper-2.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/contact.js"></script>
 
