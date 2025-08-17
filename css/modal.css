@@ -1,0 +1,139 @@
+.modal-dialog {
+  max-width: 750px;
+}
+.modal-content {
+  border-radius: 8px;
+  overflow: hidden;
+}
+/* Left section */
+.left-section {
+  background: #f9f9f9;
+  padding: 0px 20px;
+  text-align: center;
+  border-right: 1px solid #eee;
+}
+.left-section h4 {
+  color: #2b93d1;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.promise-item {
+  margin-bottom: 25px;
+}
+.promise-item img {
+  width: 48px;
+  margin-bottom: 8px;
+}
+/* Right section */
+.right-section {
+  padding: 0px 25px;
+}
+.form-control {
+  margin-bottom: 15px;
+}
+.btn-register {
+  background-color: #0d47a1;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 4px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.btn-register:hover {
+  background-color: #cccc28;
+  color: #000;
+}
+.disclaimer {
+  font-size: 11px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+.bottom-bar {
+  background: #2b93d1;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  border-top: 1px solid #ddd;
+}
+.bottom-bar i {
+  margin-right: 6px;
+}
+@media (max-width: 768px) {
+  /* Hide left section on mobile */
+  .left-section {
+    display: none !important;
+  }
+  .right-section {
+    width: 100% !important;
+  }
+}
+
+:root {
+  --godrej-top: #7b994a; /* green-ish top */
+  --godrej-bottom: #2c79a9; /* blue bottom */
+}
+
+/* Heading block */
+.brand-block {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* "GODREJ" – small, uppercase, gradient like the image */
+.brand-word {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-size: 26px; /* adjust as needed */
+  background: linear-gradient(
+    to bottom,
+    var(--godrej-top) 0%,
+    var(--godrej-top) 60%,
+    var(--godrej-bottom) 60%,
+    var(--godrej-bottom) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 6px 0;
+}
+
+/* "LAKESIDE ORCHARD" – bold olive, bigger */
+.project-title {
+  color: #5b6e3a;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 30px;
+  line-height: 1.1;
+  margin: 0 0 6px 0;
+  border-bottom: 1px solid #8c8c8c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* "SARJAPUR ROAD, BANGALORE" – small, grey, spaced letters */
+.location-subtitle {
+  color: #8c8c8c;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+@media (max-width: 767.98px) {
+  .brand-word {
+    font-size: 21px;
+  }
+  .project-title {
+    font-size: 22px;
+  }
+  .location-subtitle {
+    font-size: 12px;
+  }
+}

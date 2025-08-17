@@ -1,0 +1,80 @@
+@media (max-width: 767px) {
+  .contact-card-toggle-btn {
+    display: block;
+    margin: 0 auto 16px auto;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s;
+    z-index: 1002;
+    position: fixed;
+    left: 16px;
+    top: 16px;
+  }
+  .contact-card-toggle-btn.open {
+    transform: rotate(90deg);
+    background: #0056b3;
+  }
+  .contact-card-simple {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 80px;
+    transform: translateX(-50%);
+    z-index: 1001;
+    width: 90vw;
+    max-width: 350px;
+    /* animation: fadeInDown 0.4s; */
+  }
+  .contact-card-simple.open {
+    display: block;
+    /* animation: fadeInDown 0.4s; */
+  }
+}
+@media (min-width: 768px) {
+  .contact-card-toggle-btn {
+    display: none !important;
+  }
+  .contact-card-simple {
+    display: block !important;
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: 100%;
+    max-width: 350px;
+  }
+}
+.contact-card-simple div {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 24px 20px;
+  max-width: 350px;
+  margin: auto;
+}
+.contact-card-simple h4 {
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.contact-card-simple input {
+  color: #222 !important;
+  border: 1px solid #ddd !important;
+}
+
+.contact-card-simple input::placeholder {
+  color: #aaa !important;
+}
+.contact-card-simple form button {
+  background: var(--btn-bg);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 6px;
+}

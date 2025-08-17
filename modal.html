@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Godrej Modal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .modal-dialog {
+        max-width: 750px;
+      }
+      .modal-content {
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      /* Left section */
+      .left-section {
+        background: #f9f9f9;
+        padding: 0px 20px;
+        text-align: center;
+        border-right: 1px solid #eee;
+      }
+      .left-section h4 {
+        color: #2b93d1;
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+      .promise-item {
+        margin-bottom: 25px;
+      }
+      .promise-item img {
+        width: 48px;
+        margin-bottom: 8px;
+      }
+      /* Right section */
+      .right-section {
+        padding: 0px 25px;
+      }
+      .form-control {
+        margin-bottom: 15px;
+      }
+      .btn-register {
+        background-color: #0d47a1;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        padding: 12px 20px;
+        border-radius: 4px;
+        width: 100%;
+        transition: background-color 0.3s ease;
+      }
+      .btn-register:hover {
+        background-color: #cccc28;
+        color: #000;
+      }
+      .disclaimer {
+        font-size: 11px;
+        color: #555;
+        margin-top: 10px;
+        line-height: 1.4;
+      }
+      .bottom-bar {
+        background: #2b93d1;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-weight: 600;
+        border-top: 1px solid #ddd;
+      }
+      .bottom-bar i {
+        margin-right: 6px;
+      }
+      @media (max-width: 768px) {
+        /* Hide left section on mobile */
+        .left-section {
+          display: none !important;
+        }
+        .right-section {
+          width: 100% !important;
+        }
+      }
+
+      :root {
+        --godrej-top: #7b994a; /* green-ish top */
+        --godrej-bottom: #2c79a9; /* blue bottom */
+      }
+
+      /* Heading block */
+      .brand-block {
+        text-align: center;
+        margin-bottom: 8px;
+      }
+
+      /* "GODREJ" – small, uppercase, gradient like the image */
+      .brand-word {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 1;
+        font-size: 26px; /* adjust as needed */
+        background: linear-gradient(
+          to bottom,
+          var(--godrej-top) 0%,
+          var(--godrej-top) 60%,
+          var(--godrej-bottom) 60%,
+          var(--godrej-bottom) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0 0 6px 0;
+      }
+
+      /* "LAKESIDE ORCHARD" – bold olive, bigger */
+      .project-title {
+        color: #5b6e3a;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 30px;
+        line-height: 1.1;
+        margin: 0 0 6px 0;
+        border-bottom: 1px solid #8c8c8c;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      /* "SARJAPUR ROAD, BANGALORE" – small, grey, spaced letters */
+      .location-subtitle {
+        color: #8c8c8c;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+      @media (max-width: 767.98px) {
+        .brand-word {
+          font-size: 21px;
+        }
+        .project-title {
+          font-size: 22px;
+        }
+        .location-subtitle {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Trigger button -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#godrejModal"
+    >
+      Open Modal
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="godrejModal"
+      tabindex="-1"
+      aria-labelledby="godrejModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Close button -->
+          <button
+            type="button"
+            class="btn-close ms-auto m-2"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+
+          <!-- Body -->
+          <div class="modal-body d-flex p-0">
+            <!-- Left Section -->
+            <div class="left-section col-md-4 d-none d-md-block">
+              <h4>We Promise</h4>
+              <div class="promise-item">
+                <img src="/images/popup/phone.png" alt="Call Back" />
+                <p>Instant Call Back</p>
+              </div>
+              <div class="promise-item">
+                <img src="/images/popup/car.png" alt="Free Site Visit" />
+                <p>Free Site Visit</p>
+              </div>
+              <div class="promise-item">
+                <img src="/images/popup/rupee.png" alt="Best Price" />
+                <p>Unmatched Price</p>
+              </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="right-section col-md-8">
+              <div class="brand-block text-center">
+                <div class="brand-word">GODREJ</div>
+                <div class="project-title">LAKESIDE ORCHARD</div>
+                <div class="location-subtitle">SARJAPUR ROAD, BANGALORE</div>
+              </div>
+
+              <p class="fw-bold text-center">
+                Register Here And Avail
+                <span style="color: #ff0000; font-size: 18px"
+                  >The Best Offers!!</span
+                >
+              </p>
+
+              <form>
+                <input type="text" class="form-control" placeholder="Name" />
+                <div class="input-group mb-3">
+                  <span class="input-group-text">+91</span>
+                  <input
+                    type="text"
+                    class="form-control mb-0"
+                    placeholder="Mobile No"
+                  />
+                </div>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="E-Mail Address"
+                />
+
+                <button type="submit" class="btn-register mt-2">
+                  Pre-Register Now
+                </button>
+              </form>
+
+              <p class="disclaimer">
+                I authorize company representatives to Call, SMS, Email or
+                WhatsApp me about its products and offers. This consent
+                overrides any registration for DNC/NDNC.
+              </p>
+            </div>
+          </div>
+
+          <!-- Footer inside modal -->
+          <div class="bottom-bar">
+            <i class="bi bi-telephone-fill"></i> +91-8486268486
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
