@@ -239,32 +239,88 @@
             </div>
         </section>
         <!-- Fixed Contact Card Toggle Button for Mobile (outside swiper/hero section) -->
-        <button class="contact-card-toggle-btn d-block d-md-none contact-toggle-fixed-mobile" id="contactCardToggle" aria-label="Show Contact Card">
-            <span id="toggleIcon">&#9993;</span>
-        </button>
+        <!-- Fixed Contact Form for Mobile -->
+       <!-- Contact Form (Initially Hidden) -->
+<!-- Contact Form (Initially Hidden) -->
+<div class="fixed-contact-form d-md-none" 
+     id="fixedContactForm" 
+     style="display:none;position:fixed;left:4vw;bottom:80px;z-index:10000;width:90vw;max-width:340px;background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.18);padding:18px 16px 16px 16px;">
+    <h4 style="text-align:center;margin-bottom:12px;">Get in Touch</h4>
+    <form id="fixedContactFormBanner">
+        <input type="text" class="form-control mb-2" placeholder="Name" name="name" required>
+        <input type="email" class="form-control mb-2" placeholder="Email" name="email" required>
+        <input type="text" class="form-control mb-2" placeholder="Contact" name="mobile" required>
+        <button type="submit" class="btn w-100" style="background:#007bff;color:#fff;">Submit</button>
+        <div id="fixedContactBannerMsg" style="margin-top:10px;display:none;"></div>
+    </form>
+</div>
 
-            <div class="abs w-100 bottom-0 z-2 pb-4 sm-hide">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <h6>Lakeside Living</h6>
-                                </div>
-                                <div>
-                                    <h6>40+ Amenities</h6>
-                                </div>
-                                <div>
-                                    <h6>6 Acres Of Green</h6>
-                                </div>
-                                <div>
-                                    <h6>47,000+ Clubhouse</h6>
-                                </div>
-                            </div>
-                        </div>
+<!-- Toggle Icon Button (Fixed) -->
+<button class="d-block d-md-none" id="toggleContactFormBtn" 
+        style="position:fixed;right:4vw;bottom:20px;z-index:10001;width:48px;height:48px;border-radius:50%;background:#007bff;color:#fff;border:none;box-shadow:0 2px 12px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;">
+    <span id="toggleIcon" style="font-size:24px;">&#9993;</span>
+</button>
+<a href="https://wa.me/919876543210?text=Hi%20there!" target="_blank" 
+   style="position:fixed;bottom:20px;left:20px;z-index:10001;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.3);">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        alt="WhatsApp" style="width:32px;height:32px;">
+</a>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("fixedContactForm");
+    const toggleBtn = document.getElementById("toggleContactFormBtn");
+    const toggleIcon = document.getElementById("toggleIcon");
+
+    let isOpen = false;
+
+    toggleBtn.addEventListener("click", () => {
+        isOpen = !isOpen;
+console.log(`Contact form is now ${isOpen ? 'open' : 'closed'}`);
+console.log("form",form)
+        if (isOpen) {
+            form.style.display = "block";
+            toggleIcon.innerHTML = "&#10005;"; // ❌ close
+        } else {
+            form.style.display = "none";
+            toggleIcon.innerHTML = "&#9993;"; // ✉ envelope
+        }
+    });
+});
+</script>
+
+<!-- 
+        <script>
+            const contactForm = document.getElementById('fixedContactForm');
+            const toggleBtn = document.getElementById('toggleContactFormBtn');
+            let isVisible = true;
+            toggleBtn.addEventListener('click', function() {
+            isVisible = !isVisible;
+            contactForm.style.display = isVisible ? 'block' : 'none';
+            });
+        </script> -->
+
+        <div class="abs w-100 bottom-0 z-2 pb-4 sm-hide">
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="d-flex justify-content-between">
+                    <div>
+                    <h6>Lakeside Living</h6>
+                    </div>
+                    <div>
+                    <h6>40+ Amenities</h6>
+                    </div>
+                    <div>
+                    <h6>6 Acres Of Green</h6>
+                    </div>
+                    <div>
+                    <h6>47,000+ Clubhouse</h6>
                     </div>
                 </div>
+                </div>
             </div>
+            </div>
+        </div>
         </section>
 
         <!-- Ads -->
