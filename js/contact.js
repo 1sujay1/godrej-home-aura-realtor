@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var name = form.name.value.trim();
     var email = form.email.value.trim();
     var mobile = form.mobile.value.trim();
+    var message = form.message.value.trim();
+
     if (!name || !email || !mobile) {
       msgBox.style.display = "block";
       msgBox.style.color = "#d32f2f";
@@ -45,7 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch(`${BaseURL}/api/v1/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, mobile, message: "GODREJ-DEFAULT" }),
+      body: JSON.stringify({
+        name,
+        email,
+        mobile,
+        message: message ?? "GODREJ-DEFAULT",
+      }),
     })
       .then(function (res) {
         if (res.status !== 200) {
