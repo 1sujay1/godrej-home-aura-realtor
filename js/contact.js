@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function setMobileState() {
     if (window.innerWidth < 768) {
       cardBox.classList.remove("open");
-      icon.innerHTML = "&#128222;";
+      icon.innerHTML = "&#9993;";
       toggleBtn.style.display = "block";
     } else {
       cardBox.classList.add("open");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleBtn.classList.toggle("open");
     icon.innerHTML = cardBox.classList.contains("open")
       ? "&#10005;"
-      : "&#128222;";
+      : "&#9993;";
   });
   window.addEventListener("resize", setMobileState);
 });

@@ -1,5 +1,6 @@
-.anim-order-1, .anim-order-2{
-    opacity: 0;
+.anim-order-1,
+.anim-order-2 {
+  opacity: 0;
 }
 
 /*
@@ -12,14 +13,14 @@
 */
 
 .swiper-slide.swiper-slide-active .anim-order-1,
-.swiper-slide.swiper-slide-duplicate-active .anim-order-1{
-    animation-name: fadeInUp;
-    animation-duration: .75s;
-    animation-delay: .5s;
+.swiper-slide.swiper-slide-duplicate-active .anim-order-1 {
+  animation-name: fadeInUp;
+  animation-duration: 0.75s;
+  animation-delay: 0.5s;
 }
 .swiper-slide.swiper-slide-active .anim-order-2,
-.swiper-slide.swiper-slide-duplicate-active .anim-order-2{
-    animation-name: fadeInUp;
-    animation-duration: .75s;
-    animation-delay: .8s;
+.swiper-slide.swiper-slide-duplicate-active .anim-order-2 {
+  animation-name: fadeInUp;
+  animation-duration: 0.75s;
+  animation-delay: 0.8s;
 }

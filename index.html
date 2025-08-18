@@ -189,60 +189,59 @@
             <div class="abs w-100 abs-centered z-2">
                 <div class="container">
                     <div class="spacer-double"></div>
-
                     <div class="row g-4 align-items-center justify-content-between">
-                        <div class="col-md-5">
-                            <h2 class="mb-0">Elegant Living by the Lake</h2>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <!-- <h3 class="fw-400">At Sarjapur Road, Bangalore</h3> -->
-                            <!-- Contact Card Toggle and Card Overlay for Mobile -->
-                          
-                            <button class="contact-card-toggle-btn d-block d-md-none" id="contactCardToggle" aria-label="Show Contact Card">
-                              <span id="toggleIcon">&#128222;</span>
-                            </button>
-                            <div class="contact-card-simple" id="contactCardBox">
-                              <div>
-                                <h4 >Get in Touch</h4>
-                                <form id="contactFormBanner">
-                                  <input type="text" class="form-control mb-3" placeholder="Name" name="name" required>
-                                  <input type="email" class="form-control mb-3" placeholder="Email" name="email" required>
-                                  <input type="text" class="form-control mb-3" placeholder="Contact" name="mobile" required>
-                                  <button type="submit" class="btn w-100">Submit</button>
-                                <div id="contactBannerMsg" style="margin-top:10px;display:none;"></div>
-                                </form>
-                              </div>
+                        <div class="col-md-7 col-12">
+                            <div class="slider-title-block text-white" style="position:relative;z-index:2;">
+                                <!-- Overlay for mobile -->
+                                <div class="mobile-title-overlay"></div>
+                                <h1 class="slider-title mb-2 text-center text-md-start" style="font-size:2.2rem;font-weight:700;">
+                                    Elegant Living by the Lake
+                                </h1>
+                                <ul class="slider-subtitles list-unstyled mb-3 text-center text-md-start" style="font-size:1.1rem;">
+                                    <li>Serene Lake Views</li>
+                                    <li>6 Acres of Greenery</li>
+                                    <li>40+ World-Class Amenities</li>
+                                    <li>Grand Clubhouse</li>
+                                    <li>Prime Sarjapur Road Location</li>
+                                </ul>
                             </div>
-                           
-                            <!-- <a class="btn-main btn-line bg-blur fx-slide" href="#section-overview"><span>Explore Property</span></a> -->
+                        </div>
+                       
+                        <div class="col-md-4 col-12 mt-3 mt-md-0">
+                            <!-- Contact Card Overlay for Mobile (button moved outside wrapper) -->
+                            <div class="contact-card-simple" id="contactCardBox">
+                                <div>
+                                    <h4>Get in Touch</h4>
+                                    <form id="contactFormBanner">
+                                        <input type="text" class="form-control mb-3" placeholder="Name" name="name" required>
+                                        <input type="email" class="form-control mb-3" placeholder="Email" name="email" required>
+                                        <input type="text" class="form-control mb-3" placeholder="Contact" name="mobile" required>
+                                        <button type="submit" class="btn w-100">Submit</button>
+                                        <div id="contactBannerMsg" style="margin-top:10px;display:none;"></div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+       
             <div class="vertical-center">
                 <div class="swiper">
-                  <!-- Additional required wrapper -->
                   <div class="swiper-wrapper">
-                    <!-- Slides -->
                     <div class="swiper-slide">
                         <div class="swiper-inner" data-bgimage="url(/images/slider/1.webp)">
                             <div class="sw-overlay op-4"></div>
                         </div>
                     </div>
-
-                    <!-- Slides -->
-                    <!-- <div class="swiper-slide">
-                        <div class="swiper-inner" data-bgimage="url(images/slider/4.webp)">
-                            <div class="sw-overlay op-4"></div>
-                        </div>
-                    </div> -->
-
-
                   </div>
-                  
                 </div>
             </div>
+        </section>
+        <!-- Fixed Contact Card Toggle Button for Mobile (outside swiper/hero section) -->
+        <button class="contact-card-toggle-btn d-block d-md-none contact-toggle-fixed-mobile" id="contactCardToggle" aria-label="Show Contact Card">
+            <span id="toggleIcon">&#9993;</span>
+        </button>
 
             <div class="abs w-100 bottom-0 z-2 pb-4 sm-hide">
                 <div class="container">
@@ -727,11 +726,11 @@
     <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Amenities Of Godrej Lakeside Orchard</h2>
     <div class="amenities-grid">
       <div class="amenity-item">
-        <img src="/images/gallery/swimming.PNG" alt="Swimming Pool">
+        <img src="/images/gallery/swimming.png" alt="Swimming Pool">
         <span>Swimming Pool</span>
       </div>
       <div class="amenity-item">
-        <img src="/images/gallery/cafe.PNG" alt="Cafe">
+        <img src="/images/gallery/cafe.png" alt="Cafe">
         <span>Cafe</span>
       </div>
       <div class="amenity-item">
@@ -1110,9 +1109,9 @@
                             </div>
                         </div>
                     </form>
-                    <!-- <div id="success_message_col" class='mt-2'>
+                    <div id="success_message_col" class='mt-2'>
                         Your message has been sent successfully. Refresh this page if you want to send more messages.
-                    </div> -->
+                    </div>
                     <div id="error_message" class='error'>
                         Sorry there was an error sending your form.
                     </div>
@@ -1132,8 +1131,8 @@
                         <img src="images/logo.png" class="w-200px" alt="">
                         <div class="spacer-single"></div>
                         <div class="fs-16">
-                            Sarjapur Road, Bangalore,<br>
-                            Karnataka
+                            712 Jefferson Ave, Brooklyn<br>
+                            New York 11221
                         </div>
                     </div>
                 </div>                
@@ -1146,7 +1145,7 @@
                     <div class="d-flex">
                         <i class="fs-60 id-color icon_phone"></i>
                         <div class="ms-3">
-                            <h4 class="mb-0">Call/WhatsApp</h4>
+                            <h4 class="mb-0">Call Us</h4>
                             <p>Call: +91 98807 79843</p>
                         </div>
                     </div>
@@ -1154,10 +1153,10 @@
                 
                 <div class="col-lg-4 col-md-6 mb-sm-30">
                     <div class="d-flex">
-                        <!-- <i class="fs-60 id-color icon_clock"></i> -->
+                        <i class="fs-60 id-color icon_clock"></i>
                         <div class="ms-3">
-                            <h4 class="mb-0">office</h4>
-                            <p>080 497 83931</p>
+                            <h4 class="mb-0">Opening Hours</h4>
+                            <p>All Days 06:00 - 22:00</p>
                         </div>
                     </div>
                 </div>

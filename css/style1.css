@@ -456,3 +456,33 @@ table th {
   display: inline-block !important;
   position: absolute !important;
 }
+/* .swiper-inner {
+  background: url(/images/slider/1.webp) 0% 0% / cover no-repeat;
+} */
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .swiper-inner {
+    background: url("/images/slider/1.webp") center center / cover no-repeat !important;
+  }
+}
+/* Overlay only on mobile */
+@media (max-width: 767px) {
+  .slider-title-block {
+    position: relative;
+  }
+  .mobile-title-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 12px;
+    z-index: 1;
+  }
+  .slider-title-block > h1,
+  .slider-title-block > ul {
+    position: relative;
+    z-index: 2;
+  }
+}

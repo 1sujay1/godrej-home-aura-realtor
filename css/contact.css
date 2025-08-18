@@ -24,7 +24,7 @@
     display: none;
     position: fixed;
     left: 50%;
-    top: 80px;
+    top: 0;
     transform: translateX(-50%);
     z-index: 1001;
     width: 90vw;
@@ -80,4 +80,49 @@
 }
 [data-lastpass-icon-root] {
   display: none !important;
+}
+
+.slider-title-block {
+  padding: 1.5rem 0;
+}
+.slider-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.slider-subtitles li {
+  margin-bottom: 0.3rem;
+}
+@media (max-width: 767px) {
+  .slider-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .slider-subtitles {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .slider-title-block {
+    padding: 1rem 0 0.5rem 0;
+  }
+  .contact-toggle-fixed-mobile {
+    position: fixed;
+    left: 4vw;
+    top: 80px;
+    z-index: 9999;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    background: #fff;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    margin-bottom: 0;
+  }
+  .contact-toggle-fixed-mobile #toggleIcon {
+    font-size: 2rem;
+    color: #007bff;
+  }
 }
