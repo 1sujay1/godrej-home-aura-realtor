@@ -89,6 +89,9 @@
   font-size: 2.2rem;
   font-weight: 700;
 }
+.slider-subtitles {
+  width: fit-content;
+}
 .slider-subtitles li {
   margin-bottom: 0.3rem;
 }
@@ -125,4 +128,89 @@
     font-size: 2rem;
     color: #007bff;
   }
+}
+/* Web mode only */
+@media (min-width: 768px) {
+  /* Title */
+  .slider-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: sliderTitleUp 1s ease forwards;
+  }
+
+  @keyframes sliderTitleUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* List items */
+  .slider-subtitles li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.35); /* subtle dark overlay */
+    padding: 6px 14px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    color: #fff;
+    backdrop-filter: blur(2px); /* adds premium frosted effect */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: sliderListFade 0.8s ease forwards;
+  }
+
+  /* Staggered animation delays */
+  .slider-subtitles li:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  .slider-subtitles li:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  .slider-subtitles li:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+  .slider-subtitles li:nth-child(4) {
+    animation-delay: 1.2s;
+  }
+  .slider-subtitles li:nth-child(5) {
+    animation-delay: 1.5s;
+  }
+
+  @keyframes sliderListFade {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.golden-title-animated {
+  display: inline-block;
+  background: linear-gradient(90deg, #f9d423 0%, #ff4e50 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  letter-spacing: 1px;
+  animation: shimmer 2s infinite linear;
+  position: relative;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+.golden-title-animated {
+  background-size: 400px 100%;
 }
