@@ -45,10 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
     submitBtn.disabled = true;
     var originalText = submitBtn.textContent;
     submitBtn.textContent = "Submitting...";
-    fetch(`${BaseURL}/api/v1/contact`, {
+    fetch(`${BaseURL}/api/v1/client/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, mobile, message: "GODREJ-MODAL" }),
+      body: JSON.stringify({
+        name,
+        email,
+        phone: mobile,
+        project: "GODREJ_LAKESIDE_ORCHARD",
+        message: "",
+      }),
     })
       .then(function (res) {
         if (res.status !== 200) {
